@@ -31,7 +31,7 @@ export default function Home() {
           opacity: 0.9,
           lineHeight: '1.6'
         }}>
-          Get started by signing in or creating a new account
+          Get started by signing in or creating a new account or Chat
         </p>
 
         <div style={{

@@ -1,80 +1,39 @@
-import Link from 'next/link'
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div style={{
-      minHeight: '100vh',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-      padding: '50px 20px',
-      background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-      color: 'white'
-    }}>
-      <div style={{
-        maxWidth: '600px',
-        textAlign: 'center'
-      }}>
-        <h1 style={{
-          fontSize: '3rem',
-          fontWeight: 'bold',
-          marginBottom: '20px',
-          lineHeight: '1.2'
-        }}>
-          Welcome! 👋
-        </h1>
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-600 via-purple-600 to-indigo-700 px-6">
+      <div className="w-full max-w-xl text-center bg-white/10 backdrop-blur-xl rounded-3xl p-10 shadow-2xl border border-white/20">
         
-        <p style={{
-          fontSize: '1.25rem',
-          marginBottom: '40px',
-          opacity: 0.9,
-          lineHeight: '1.6'
-        }}>
-          Get started by signing in or creating a new account or Chat
+        <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">
+          Chat. Simple. Fast.
+        </h1>
+
+        <p className="text-lg text-white/90 mb-10 leading-relaxed">
+          Talk to AI instantly.  
+          Sign in to save chats, or chat for free with no memory.
         </p>
 
-        <div style={{
-          display: 'flex',
-          gap: '20px',
-          justifyContent: 'center',
-          flexWrap: 'wrap'
-        }}>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             href="/login"
-            style={{
-              padding: '15px 40px',
-              background: 'white',
-              color: '#667eea',
-              textDecoration: 'none',
-              borderRadius: '8px',
-              fontWeight: '600',
-              fontSize: '1.1rem',
-              display: 'inline-block',
-              boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
-            }}
+            className="px-8 py-4 rounded-xl bg-white text-indigo-700 font-semibold text-lg shadow-lg hover:scale-105 hover:shadow-xl transition"
           >
-            Get Started
+            Sign in
           </Link>
+
           <Link
             href="/chat"
-            style={{
-              padding: '15px 40px',
-              background: 'rgba(255, 255, 255, 0.2)',
-              color: 'white',
-              textDecoration: 'none',
-              borderRadius: '8px',
-              fontWeight: '600',
-              fontSize: '1.1rem',
-              display: 'inline-block',
-              boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-              border: '2px solid white'
-            }}
+            className="px-8 py-4 rounded-xl border-2 border-white text-white font-semibold text-lg hover:bg-white hover:text-indigo-700 transition"
           >
-            Chat
+            Chat for free (no memory)
           </Link>
         </div>
+
+        <p className="mt-8 text-sm text-white/70">
+          No signup required for free chat.
+        </p>
       </div>
     </div>
-  )
+  );
 }
